@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../Styles/Produto/Produto.scss";
 
 
@@ -13,6 +14,7 @@ const Produto = ({titulo, imagem, valor} : dadosProduto) => {
             <h2>{titulo}</h2>
             <img src={imagem} alt="" />
             <h4>${valor}</h4>
+            <button><Link to="/detalhe-produto">Ver Produto</Link></button>
         </div>
     )
 }

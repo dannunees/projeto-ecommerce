@@ -15,4 +15,22 @@
         margin: 32px 0;
         max-width: 100%;
     }
+
+    button {
+        background: green;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
