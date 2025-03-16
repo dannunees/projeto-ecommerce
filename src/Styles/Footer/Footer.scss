@@ -1,0 +1,15 @@
+footer {
+    background: #00bcd44f;
+    padding: 16px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+}

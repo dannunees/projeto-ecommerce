@@ -1,0 +1,12 @@
+.pageProdutos {
+    h1 {
+        text-align: center;
+    }
+
+    .contentProdutos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 48px 0 90px;
+    }
+}
