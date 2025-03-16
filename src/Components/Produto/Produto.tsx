@@ -1,20 +1,16 @@
 import { Link } from "react-router-dom";
 import "../../Styles/Produto/Produto.scss";
+import { ProdutosType } from "../../Types/Types";
 
 
-interface dadosProduto {
-    titulo: string,
-    imagem: string,
-    valor: number
-}
 
-const Produto = ({titulo, imagem, valor} : dadosProduto) => {
+const Produto = ({title, image, price, id} : ProdutosType) => {
     return (
         <div className="boxProduto">
-            <h2>{titulo}</h2>
-            <img src={imagem} alt="" />
-            <h4>${valor}</h4>
-            <button><Link to="/detalhe-produto">Ver Produto</Link></button>
+            <h2>{title}</h2>
+            <img src={image} alt="" />
+            <h4>${price}</h4>
+            <button><Link to={`/produto/${id}`}>Ver Produto</Link></button>
         </div>
     )
 }

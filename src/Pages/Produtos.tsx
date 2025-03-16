@@ -1,24 +1,16 @@
 import { useEffect, useState } from "react";
 import "../Styles/Pages/Produtos.scss";
 import Produto from "../Components/Produto/Produto";
+import { ProdutosType } from "../Types/Types";
 
 const Produtos = () => {
 
-    interface Produto {
-        id: number
-        title: string,
-        price: number,
-        description: string,
-        category: string,
-        image: string,
-    }
-
-    const[produtos, setProdutos] = useState<Produto[]>([]);
+    const[produtos, setProdutos] = useState<ProdutosType[]>([]);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
-        .then((dados: Produto[]) => {
+        .then((dados: ProdutosType[]) => {
             console.log('produtos', dados),
             setProdutos(dados);
         })
@@ -32,7 +24,7 @@ const Produtos = () => {
                 
                 <div className="contentProdutos">
                     {produtos.map((item) => (
-                        <Produto titulo={item.title} imagem={item.image} valor={item.price} />
+                        <Produto key={item.id} id={item.id} title={item.title} image={item.image} price={item.price} description={item.description} category={item.category} />
                     ))}
                 </div>
 
