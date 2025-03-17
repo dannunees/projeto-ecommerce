@@ -26,10 +26,11 @@ const ProdutoDetalhe = () => {
         <>
             <div className="boxDetalheProduto">
                 <div className="container">
-                    <h1>Conheça mais sobre o produto: <strong>{produto.title}!</strong></h1> 
+                    <h1 className="animeLeft">Conheça mais sobre o produto: <strong>{produto.title}!</strong></h1> 
                     <div className="boxDetalheProduto__content">
-                        <img src={produto.image} alt="" />
-                        <div className="boxDetalheProduto__content__txt">
+                        <img className="animeLeft" src={produto.image} alt="" />
+                        <div className="boxDetalheProduto__content__txt animeLeft">
+                            <h6>{produto.category}</h6>
                             <h2>{produto.title}</h2>
                             <p>{produto.description}</p>
                             <h4>Preço: ${produto.price}</h4>

@@ -12,11 +12,12 @@ const Banner = () => {
         slidesToShow: 1,    // Quantos slides aparecem ao mesmo tempo
         slidesToScroll: 1,  // Quantos slides avançam por vez
         autoplay: true,     // Auto-play ativado
-        autoplaySpeed: 2000 // Tempo entre as transições (2s)
+        autoplaySpeed: 2000, // Tempo entre as transições (2s)
+        pauseOnHover: false
     };
 
     return (
-        <Slider className="banner" {...settings}>
+        <Slider className="banner animeLeft" {...settings}>
             <div>
                 <div className="bgBanner" style={{ backgroundImage: `url('/banner.jpg')` }}></div>
             </div>

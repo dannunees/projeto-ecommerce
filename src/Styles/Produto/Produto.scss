@@ -4,16 +4,40 @@
     border: 1px solid;
     border-radius: 10px;
     padding: 24px;
+    position: relative;
+
+    @media(max-width:767px) {
+        width: 100%;
+    }
+
+    h6 {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: green;
+        color: white;
+        font-weight: 400;
+        padding: 8px;
+        border-radius: 10px;
+        letter-spacing: 1.2px;
+        font-size: 12px;
+    }
 
     h2 {
         margin: 0;
         font-size: 16px;
+        padding-top: 32px;
     }
 
     img {
-        height: 200px;
-        margin: 32px 0;
+        height: 120px;
+        margin: 16px 0;
         max-width: 100%;
+    }
+
+    h4 {
+        margin: 16px 0;
     }
 
     button {

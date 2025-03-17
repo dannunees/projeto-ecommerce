@@ -4,9 +4,10 @@ import { ProdutosType } from "../../Types/Types";
 
 
 
-const Produto = ({title, image, price, id} : ProdutosType) => {
+const Produto = ({title, image, price, id, category} : ProdutosType) => {
     return (
-        <div className="boxProduto">
+        <div className="boxProduto animeLeft">
+            <h6>{category}</h6>
             <h2>{title}</h2>
             <img src={image} alt="" />
             <h4>${price}</h4>

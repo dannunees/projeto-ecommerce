@@ -10,4 +10,74 @@
             text-align: center;
         }
     }
+
+    &__itens {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding-bottom: 60px;
+
+        @media(max-width:767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 60px;
+
+        button {
+            background: green;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+    
+            a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__destaques {
+        padding: 0 0 80px;
+        text-align: center;
+        
+        h1 {
+            text-align: center;
+        }
+
+        .slider {
+            padding-top: 40px;
+            img {
+                padding: 0 20px;
+            }
+        }
+
+        button {
+            background: green;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 40px;
+    
+            a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
 }

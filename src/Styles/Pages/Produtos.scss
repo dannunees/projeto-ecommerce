@@ -9,4 +9,26 @@
         gap: 24px;
         padding: 48px 0 90px;
     }
+
+    .filters {
+        padding-top: 16px;
+        display: flex;
+        gap: 24px;
+
+        @media(max-width:767px) {
+            flex-direction: column;
+        }
+
+        input, select {
+            border: 1px solid;
+            width: 400px;
+            height: 40px;
+            padding: 0 16px;
+            border-radius: 10px;
+
+            @media(max-width:767px) {
+                width: 100%;
+            }
+        }
+    }
 }

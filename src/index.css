@@ -16,3 +16,16 @@ body {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft .5s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+      opacity: 1;
+      transform: initial;
+  }
+}

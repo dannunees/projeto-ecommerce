@@ -1,0 +1,85 @@
+.pageContato {
+
+    h1 {
+        text-align: center;
+    }
+
+    &__boxes {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding-bottom: 90px;
+
+        @media(max-width:767px) {
+            flex-direction: column-reverse;
+        }
+
+        img {
+            width: 400px;
+            height: 500px;
+
+            @media(max-width:767px) {
+                width: 100%;
+            }
+        }
+    }
+
+    form {
+        width: 400px;
+
+        @media(max-width:767px) {
+            width: 100%;
+        }
+
+        .form-send {
+            background: green;
+            padding: 8px;
+            border-radius: 5px;
+
+            p {
+                color: white;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 16px;
+
+            input {
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+
+            textarea {
+                height: 100px;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+        }
+
+        button {
+            background: green;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 24px;
+    
+            a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+}
