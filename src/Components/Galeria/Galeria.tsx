@@ -25,6 +25,7 @@ const Galeria = () => {
         autoplay: true,     // Auto-play ativado
         autoplaySpeed: 1000, // Tempo entre as transições (2s)
         pauseOnHover: false,
+        arrows: false,
 
         responsive: [
             {
