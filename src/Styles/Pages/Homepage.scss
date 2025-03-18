@@ -56,6 +56,19 @@
 
         .slider {
             padding-top: 40px;
+
+            .slick-slide {
+                div {
+                    height: 170px;
+                    display: flex;
+                    align-items: center;
+
+                    @media(max-width: 767px) {
+                        height: initial;
+                    }
+                }
+            }
+
             img {
                 padding: 0 20px;
             }
