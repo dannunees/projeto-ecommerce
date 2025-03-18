@@ -10,6 +10,7 @@ import Login from './Pages/Login';
 import Cadastro from './Pages/Cadastro';
 import Carrinho from './Pages/Carrinho';
 
+
 const App = () => {
   return (
     <Router>

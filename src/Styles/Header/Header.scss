@@ -53,6 +53,15 @@ header {
                     font-weight: 700;
                 }
             }
+
+            button {
+                background: black;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+                padding: 4px 10px;
+            }
         }
     }
 }

@@ -10,23 +10,6 @@ body {
   margin: 0;
   box-sizing: border-box;
 
-    &.logado {
-        .boxProduto {
-            button {
-                &.addCar {
-                    display: flex;
-                }
-            }
-        }
-
-        .boxDetalheProduto__content {
-          button {
-              &.addCar {
-                  display: flex;
-              }
-          }
-        }
-    }
 }
 
 .container {

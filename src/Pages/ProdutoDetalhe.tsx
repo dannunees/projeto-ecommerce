@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "../Styles/Pages/ProdutoDetalhe.scss";
 import { useEffect, useState } from "react";
 import { ProdutosType } from "../Types/Types";
+import { SignedIn } from "@clerk/clerk-react";
 
 
 
@@ -49,7 +50,9 @@ const ProdutoDetalhe = () => {
                             <h2>{produto.title}</h2>
                             <p>{produto.description}</p>
                             <h4>Preço: ${produto.price}</h4>
-                            <button className="addCar" onClick={handleAdicionarAoCarrinho}>Adicionar ao carrinho</button>
+                            <SignedIn>
+                                <button className="addCar" onClick={handleAdicionarAoCarrinho}>Adicionar ao carrinho</button>
+                            </SignedIn>
                         </div>
                     </div>
                 </div>

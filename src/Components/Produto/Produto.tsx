@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../Styles/Produto/Produto.scss";
 import { ProdutosType } from "../../Types/Types";
+import { SignedIn, SignIn } from "@clerk/clerk-react";
 
 
 
@@ -28,7 +29,11 @@ const Produto = ({title, image, price, id, category} : ProdutosType) => {
             <img src={image} alt="" />
             <h4>${price}</h4>
             <button><Link to={`/produto/${id}`}>Ver Produto</Link></button>
-            <button className="addCar" onClick={handleAdicionarAoCarrinho}>Adicionar ao carrinho</button>
+
+            <SignedIn>
+                <button className="addCar" onClick={handleAdicionarAoCarrinho}>Adicionar ao carrinho</button>
+            </SignedIn>
+
         </div>
     )
 }

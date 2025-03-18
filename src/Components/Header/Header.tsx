@@ -1,42 +1,27 @@
 import { Link } from "react-router-dom";
 import "../../Styles/Header/Header.scss";
-import { useEffect, useState } from "react";
+import { SignedIn, SignedOut, SignOutButton, useUser } from "@clerk/clerk-react";
 
 const Header = () => {
     
-    const[login, setLogin] = useState<boolean>(false);
-
-    const isLogin = () => {
-        if( localStorage.getItem('auth') === "true") {
-            setLogin(true);
-            document.body.classList.add('logado');
-        } else {
-            setLogin(false);
-            document.body.classList.remove('logado');
-        }
-    }
-
-    const handleLogout = () => {
-        localStorage.setItem('auth', 'false');
-        isLogin();
-    }
-
-    useEffect(() => {
-        isLogin();
-    })
+    const {user} = useUser();
      
+    console.log(user);
+
     return (
         <header>
-            {login && 
-            <div className="headerTop">
-                <div className="container">
-                    <div className="headerTop__content">
-                        <p>Bem vindo, {localStorage.nome} !</p>
-                        <Link to="/carrinho"><img src="/carrinho-de-compras.png" alt="" /></Link>
+
+            <SignedIn>
+                <div className="headerTop">
+                    <div className="container">
+                        <div className="headerTop__content">
+                            <p>Bem vindo, {user?.firstName} !</p>
+                            <Link to="/carrinho"><img src="/carrinho-de-compras.png" alt="" /></Link>
+                        </div>
                     </div>
                 </div>
-            </div>
-            }
+            </SignedIn>     
+
             <div className="container">
                 <img src="/logo.png" alt="" />
                 <nav>
@@ -44,8 +29,12 @@ const Header = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/produtos">Produtos</Link></li>
                         <li><Link to="/contato">Contato</Link></li>
-                        {login ? <li><Link to="/" onClick={handleLogout}>Logout</Link></li> : <li><Link to="/login">Login</Link></li> }
-                        
+                        <SignedOut>
+                            <li><Link to="/login">Login</Link></li>
+                        </SignedOut>
+                        <SignedIn>
+                            <SignOutButton />
+                        </SignedIn>                        
                     </ul>
                 </nav>
             </div>
