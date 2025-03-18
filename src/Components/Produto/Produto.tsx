@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../Styles/Produto/Produto.scss";
 import { ProdutosType } from "../../Types/Types";
-import { useEffect, useState } from "react";
+
 
 
 
