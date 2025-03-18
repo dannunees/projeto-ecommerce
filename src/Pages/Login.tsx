@@ -38,11 +38,11 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <label htmlFor="user">Usuário</label>
-                    <input type="text" name="user" id="user" value={user} onChange={(e) => setUser(e.target.value)}/>
+                    <input placeholder="Digite seu usário" type="text" name="user" id="user" value={user} onChange={(e) => setUser(e.target.value)}/>
                 </fieldset>
                 <fieldset>
                     <label htmlFor="password">Senha</label>
-                    <input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input placeholder="Digite sua senha" type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </fieldset>
                 <button type="submit">Entrar</button>
                 <p>Ainda não tem sua conta? <Link to="/cadastro">Clique aqui</Link> para criar seu usuário!</p>
