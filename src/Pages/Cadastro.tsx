@@ -18,6 +18,9 @@ const Cadastro = () => {
         localStorage.setItem("user", user);
         localStorage.setItem("password", password);
 
+        localStorage.removeItem('carrinho');
+
+
         setCreate(true);
 
         setTimeout(() => {

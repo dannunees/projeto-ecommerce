@@ -17,19 +17,19 @@ const Login = () => {
     const handleSubmit = (e:React.FormEvent) => {
         e.preventDefault();
 
-        console.log(user);
-        console.log(password);
 
         localStorage.setItem('user', user);
         localStorage.setItem('password', password);
 
         if(fakeUser.user === user && fakeUser.password === password ) {
-            console.log('logou');
+
             localStorage.setItem('auth', 'true');
             navigate("/produtos");
             location.reload();
         } else {
-            console.log('não logou')
+            alert('usuário ou senha inválidos');
+            localStorage.removeItem('user');
+            localStorage.removeItem('password');            
         }
     }
 
