@@ -24,7 +24,7 @@ const Login = () => {
         if(fakeUser.user === user && fakeUser.password === password ) {
 
             localStorage.setItem('auth', 'true');
-            navigate("/produtos");
+            navigate("/");
             location.reload();
         } else {
             alert('usuário ou senha inválidos');
