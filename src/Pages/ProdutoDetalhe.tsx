@@ -7,9 +7,24 @@ import { ProdutosType } from "../Types/Types";
 
 const ProdutoDetalhe = () => {
 
+
+
     const {id} = useParams();
 
     const[produto, setProduto] = useState<ProdutosType | null>(null);
+
+    const handleAdicionarAoCarrinho = () => {
+
+        const carrinho = JSON.parse(localStorage.getItem("carrinho") || "[]");
+
+        if (!carrinho.includes(id)) {
+            carrinho.push(id);
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            alert("Produto adicionado ao carrinho!");
+        } else {
+            alert("Produto já está no carrinho!");
+        }
+    };
 
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${id}`)
@@ -34,6 +49,7 @@ const ProdutoDetalhe = () => {
                             <h2>{produto.title}</h2>
                             <p>{produto.description}</p>
                             <h4>Preço: ${produto.price}</h4>
+                            <button className="addCar" onClick={handleAdicionarAoCarrinho}>Adicionar ao carrinho</button>
                         </div>
                     </div>
                 </div>

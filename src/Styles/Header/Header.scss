@@ -1,5 +1,31 @@
 header {
     background: #00bcd44f;
+
+    .headerTop {
+        background: black;
+        padding: 12px 0;
+
+        .container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            p {
+                margin: 0;
+                color: white;
+            }
+
+            img {
+                height: initial !important;
+            }
+        }
+    }
+
     .container {
         display: flex;
         align-items: center;

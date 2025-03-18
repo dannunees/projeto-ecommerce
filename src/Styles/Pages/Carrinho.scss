@@ -1,0 +1,47 @@
+.pageCarrinho {
+    h2 {
+        text-align: center;
+    }
+
+    .boxCarrinho {
+        display: flex;
+        align-items: center;
+        border: 1px solid;
+        margin-bottom: 32px;
+        padding: 24px;
+        gap: 40px;
+        border-radius: 10px;
+        max-width: 50%;
+        margin: 0 auto 32px;
+
+        @media(max-width:767px) {
+            max-width: 100%;
+            flex-direction: column;
+        }
+
+        h3 {
+            width: 300px;
+
+            @media(max-width:767px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        p {
+            padding-left: 40px;
+
+            @media(max-width:767px) {
+                padding-left: 0;
+            }
+
+            &.last {
+                max-width: 300px;
+            }
+        }
+
+        img {
+            height: 100px;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.pageCadastro {
+    background-image: url('/cadastro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+    }
+    form {
+        position: relative;
+        width: 500px;
+        background: white;
+        border-radius: 10px;
+        padding: 24px;
+        text-align: center;
+
+        @media(max-width:767px) {
+            width: 100%;   
+        }
+
+        &.formActive {
+            .sucessMsg {
+                display: block;
+            }
+            
+            fieldset, button {
+                display: none;
+            }
+        }
+
+        .sucessMsg {
+            display: none;
+            background: #0080003b;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        fieldset {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            input {
+                height: 40px;
+                border: 1px solid #00bbd4;
+                border-radius: 10px;
+                background: #00bbd4;
+                width: 100%;
+                color: white;
+                padding-left: 16px;
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+
+        button {
+            background: #00bbd4;
+            border-color: #00bbd4;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+    }
+}
